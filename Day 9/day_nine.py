@@ -30,7 +30,7 @@ def count_tail_pos(data, rope):
 def move_rope(rope, direction, times):
     tail_pos, current_pos, prev_head_pos = [0, 0], [0, 0], [0, 0]
     for i in range(int(times)):
-        tail_pos.append(rope[-1])
+        tail_pos.append(rope[-1].copy())
         for k in range(len(rope)):
             if k == 0:
                 prev_head_pos = rope[0].copy()
